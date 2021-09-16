@@ -1,17 +1,12 @@
 import React, { useState } from "react";
 
-function onDarkModeClick() {
+function Header({onDarkModeClick, isDarkMode}) {
 
-const [isDarkMode, setIsDarkMode] = useState(false);
-
-  function handleDarkModeClick() {
-    setIsDarkMode((isDarkMode) => !isDarkMode);
-  }
 return (
-    <div className={"App " + (isDarkMode ? "dark" : "light")}>
+    <div >
       <header>
       <h2>Shopster</h2>
-        <button onClick={handleDarkModeClick}>
+        <button onClick={onDarkModeClick}>
           {isDarkMode ? "Dark" : "Light"} Mode
         </button>
       </header>
